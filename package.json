@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "amqplib": "^0.10.5",
+    "kafka": "^0.2.3"
+  }
+}
