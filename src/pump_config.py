@@ -1,3 +1,7 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
 class PumpConfig:
     def __init__(self, basal_rates, insulin_to_carb_ratio, insulin_sensitivity_factor, max_bolus, modes):
         self.basal_rates = basal_rates  # Liste des taux basaux par heure

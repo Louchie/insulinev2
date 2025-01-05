@@ -1,3 +1,7 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
 class InsulinPump:
     def __init__(self, config):
         self.config = config

@@ -1,3 +1,7 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
 class Patient:
     def __init__(self, initial_glucose, carb_sensitivity, insulin_sensitivity):
         self.initial_glucose = initial_glucose

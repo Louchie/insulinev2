@@ -3,10 +3,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.post("/alert/threshold")
-async def alert_threshold(data: dict):
-    return {"message": "Threshold alert received"}
-
 # Event bus functions
 def publish_event(queue_name, message):
     connection = pika.BlockingConnection(pika.ConnectionParameters("localhost"))

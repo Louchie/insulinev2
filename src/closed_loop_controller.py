@@ -1,3 +1,7 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
 class ClosedLoopController:
     def __init__(self, pump, cgm, target_glucose=100):
         self.pump = pump

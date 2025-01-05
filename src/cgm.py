@@ -1,3 +1,7 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
 class CGM:
     def __init__(self, measurement_interval=5):
         self.measurement_interval = measurement_interval

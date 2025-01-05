@@ -1,3 +1,7 @@
+from fastapi import FastAPI
+
+app = FastAPI()
+
 class Simulator:
     def __init__(self, patient, pump, cgm, controller, duration=24):
         self.patient = patient
