@@ -1,5 +1,13 @@
 import pika
+from fastapi import FastAPI
 
+app = FastAPI()
+
+@app.post("/alert/threshold")
+async def alert_threshold(data: dict):
+    return {"message": "Threshold alert received"}
+
+# Event bus functions
 def publish_event(queue_name, message):
     connection = pika.BlockingConnection(pika.ConnectionParameters("localhost"))
     channel = connection.channel()
@@ -17,8 +25,6 @@ def consume_event(queue_name, callback):
 
     channel.basic_consume(queue=queue_name, on_message_callback=on_message, auto_ack=True)
     channel.start_consuming()
-
-from src.event_bus import publish_event
 
 @app.post("/alert/threshold")
 def send_alert(glucose_level: float):

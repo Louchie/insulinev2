@@ -7,3 +7,9 @@ Lancer les tests :
 Installer: pip install coverage
 coverage run -m pytest
 coverage report
+
+Créez un environnement virtuel :
+python -m venv env
+Activez l'environnement virtuel :
+Sur Windows : env\Scripts\activate
+Sur macOS et Linux : source env/bin/activate
