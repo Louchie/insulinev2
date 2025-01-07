@@ -25,6 +25,6 @@ def consume_event(queue_name, callback):
 @app.post("/alert/threshold")
 def send_alert(glucose_level: float):
     if glucose_level < 70 or glucose_level > 180:
-        publish_event("alerts", f"Glucose level critical: {glucose_level}")
+        publish_event("alerts", "Glucose level critical: {glucose_level}")
         return {"status": "Alert sent"}
     return {"status": "Normal glucose level"}

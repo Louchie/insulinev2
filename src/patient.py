@@ -10,12 +10,11 @@ class Patient:
         self.insulin_sensitivity = insulin_sensitivity
 
     def update_glucose_level(self, insulin, carbs):
-        # Mettre à jour la glycémie en fonction de l'insuline administrée et des glucides consommés
         delta_glucose_carbs = carbs * self.carb_sensitivity
         delta_glucose_insulin = -insulin * self.insulin_sensitivity
         self.glucose_level += delta_glucose_carbs + delta_glucose_insulin
         print(f"Nouvelle glycémie : {self.glucose_level} mg/dL")
-    
+
     def add_carbs(self, carbs):
         print(f"Ajout de {carbs} g de glucides.")
         self.update_glucose_level(0, carbs)

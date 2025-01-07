@@ -10,5 +10,5 @@ class CGM:
     def measure_glucose(self, patient):
         # Simuler une mesure de glycémie
         self.current_glucose = patient.glucose_level
-        print(f"Glycémie mesurée : {self.current_glucose} mg/dL")
+        print("Glycémie mesurée : {self.current_glucose} mg/dL")
         return self.current_glucose
